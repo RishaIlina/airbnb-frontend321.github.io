@@ -1,0 +1,57 @@
+:root {
+  --body-color: #292929;
+  /* общий фон */
+
+  --title-color: #ffffff;
+  /* цвет заголовков */
+  --subtitle-color: #B4BBC5;
+  /* цвет подзаголовков */
+
+  --nav-link-color: #ffffff;
+  /* цвет ссылок в навигации */
+
+  --accent-color: #BB86FC;
+  /* основной цвет тем */
+
+  --bg-hover: rgba(255, 255, 255, 0.12);
+
+  --label-color: rgba(255, 255, 255, 0.38);
+  /* цвет текста label, placeholder */
+
+  --avatar-bg: #979797; /* цвет аватар */
+
+  /* dropdown */
+  --dropdown-button-bg: #292929;
+  --dropdown-border-color: rgba(255, 255, 255, 0.3);
+  --dropdown-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+/* logo */
+.header-logo svg {
+  --logo-fill: #ffffff;
+}
+
+
+/* btn-primary */
+.btn-primary {
+  --button-bg-color: #BB86FC;
+  --button-text-color: #000000;
+}
+
+/* modal-header */
+.modal-header {
+  --header-color: #B4BBC5;
+}
+
+
+/* forms */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+textarea {
+  --input-bg-color: #292929;
+  --input-border-color: #D2D2D2;
+  --input-border-color-hover: #ffffff;
+}
