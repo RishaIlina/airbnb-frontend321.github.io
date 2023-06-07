@@ -55,3 +55,11 @@ textarea {
   --input-border-color: #D2D2D2;
   --input-border-color-hover: #ffffff;
 }
+
+/* чекбокс в модалке */
+.modal-checkbox {
+  --checkbox-bg-color-default: transparent;
+  --checkbox-bg-color-checked: #BB86FC;
+  --checkbox-mark-color: #222222;
+  --checkbox-border-color: rgba(255, 255, 255, 0.6);
+}
