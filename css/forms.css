@@ -382,19 +382,12 @@ textarea {
   align-items: center;
 }
 
-
-.btn-language:hover,
 .btn-money:hover,
-.btn-language:hover,
-.btn-facebook:hover,
-.btn-twitter:hover,
-.btn-instagram:hover {
-background-color: var(--bg-hover);
+.btn-language:hover {
+background-color: var(--footer-bg);
 }
 
-.btn-language,
-.btn-facebook,
-.btn-twitter {
+.btn-language {
   margin-right: 16px;
   padding: 0;
 }
@@ -404,6 +397,3 @@ background-color: var(--bg-hover);
   padding: 0;
 }
 
-.btn-instagram {
-  padding: 0;
-}
