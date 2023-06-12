@@ -86,3 +86,13 @@ const renderData = async () => {
     console.error('Error:', error);
   }
 };
+
+/* help-list */
+const links = document.querySelectorAll('.help-btn');
+
+links.forEach(link => {
+  link.addEventListener('click', event => {
+    document.querySelector('.help-btn.help-btn__active').classList.remove('help-btn__active');
+    event.currentTarget.classList.add('help-btn__active');
+  })
+})
