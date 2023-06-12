@@ -26,8 +26,7 @@ textarea::placeholder {
   color: var(--input-border-color);
 }
 
-input:not([type="checkbox"]):focus
-input:not([type="search"]):focus,
+input:not([type="checkbox"]):focus input:not([type="search"]):focus,
 textarea:focus {
   box-shadow: var(--box-shadow);
 }
@@ -155,11 +154,11 @@ textarea {
 /* modal-checkbox */
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
   .modal-checkbox {
-    --active: var( --checkbox-bg-color-checked);
+    --active: var(--checkbox-bg-color-checked);
     --active-inner: var(--checkbox-mark-color);
-    --focus: 1px var( --checkbox-bg-color-checked);
+    --focus: 1px var(--checkbox-bg-color-checked);
     --border: var(--checkbox-border-color);
-    --border-hover: var( --checkbox-bg-color-checked);
+    --border-hover: var(--checkbox-bg-color-checked);
     --background: var(--checkbox-bg-color-default);
     --disabled: #F6F8FF;
     --disabled-inner: #E1E6F9;
@@ -399,7 +398,7 @@ textarea {
 
 .btn-money:hover,
 .btn-language:hover {
-background-color: var(--footer-bg);
+  background-color: var(--footer-bg);
 }
 
 .btn-language {
@@ -412,3 +411,8 @@ background-color: var(--footer-bg);
   padding: 0;
 }
 
+.header-buttons {
+  display: inline-flex;
+  width: 15%;
+  justify-content: space-between;
+}
