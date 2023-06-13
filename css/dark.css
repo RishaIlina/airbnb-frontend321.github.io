@@ -29,7 +29,7 @@
   /* footer */
   --footer-bg: #292929;
   --footer-link-color: #ffffff;
-
+  --footer-bg-hover: rgba(255, 255, 255, 0.12);
 }
 
 /* logo */

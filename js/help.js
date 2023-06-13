@@ -1,3 +1,70 @@
+/* карточки */
+const fetchData = () => {
+  return fetch('../data.json')
+    .then(res => {
+
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+
+
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      return [];
+    });
+
+};
+
+const renderData = async () => {
+  try {
+    const products = await fetchData();
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+    if (swiperWrapper) {
+      products.forEach(product => {
+        const div = document.createElement('div');
+        div.classList.add('swiper-slide');
+
+        div.innerHTML = `
+        <a class="card-link" href="help-details.html?id=${product?.id}" target="_blank" rel="noopener noreferrer nofollow"></a>
+        <div class="card">
+          <div class="card-image">
+            <img src="${product?.imgSrc}" alt="image">
+          </div>
+          <h3 class="card-text__name">${product?.name}</h3>
+          <p class="card-text__description">${product?.description}</p>
+        </div>
+        `;
+
+        swiperWrapper.appendChild(div);
+      });
+    } else {
+      console.error('Element with class "swiper-wrapper" not found');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+
+  initSwiper();
+};
+
+/* слайдер */
+function initSwiper() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderData);
+
 /* dropdown */
 const dropDownButton = document.querySelector('.dropdown-button');
 const dropDownMenu = document.querySelector('.dropdown-menu');
@@ -40,59 +107,25 @@ document.addEventListener('click', (event) => {
   }
 })
 
-/* карточки */
-const fetchData = () => {
-  return fetch('../data.json')
-    .then(res => {
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
+/* tabs */
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelector('.tabs');
+  const tabsBtn = document.querySelectorAll('.tabs-btn');
+  const tabsContent = document.querySelectorAll('.tabs-content');
+
+  if (tabs) {
+    tabs.addEventListener('click', (e) => {
+      if (e.target.classList.contains('tabs-btn')) {
+        const tabsPath = e.target.dataset.tabsPath;
+        tabsBtn.forEach(el => el.classList.remove('tabs-btn__active'));
+        document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('tabs-btn__active');
+        tabsHandler(tabsPath);
       }
-      return res.json();
     })
-    .catch(error => {
-      console.error('Error:', error);
-      return [];
-    });
-};
-
-const renderData = async () => {
-  try {
-    const products = await fetchData();
-    const productsWrapper = document.querySelector('.products-wrapper');
-
-    if (productsWrapper) {
-      products.forEach(product => {
-        const div = document.createElement('div');
-        div.classList.add('card-wrapper');
-
-        div.innerHTML = `
-          <a class="card-link" href="#" target="_blank" rel="noopener noreferrer nofollow"></a>
-          <div class="card">
-            <div class="card-image">
-              <img src="${product.imgSrc}" alt="image">
-            </div>
-            <div class="card-text__descr text-secondary">${product.rating}</div>
-            <div class="card-text__config text-secondary">${product.name}</div>
-            <div class="card-text__date text-secondary">${product.price}</div>
-          </div>
-        `;
-
-        productsWrapper.appendChild(div);
-      });
-    } else {
-      console.error('Element with class "products-wrapper" not found');
-    }
-  } catch (error) {
-    console.error('Error:', error);
   }
-};
 
-/* help-list */
-const links = document.querySelectorAll('.help-btn');
-
-links.forEach(link => {
-  link.addEventListener('click', event => {
-    document.querySelector('.help-btn.help-btn__active').classList.remove('help-btn__active');
-    event.currentTarget.classList.add('help-btn__active');
-  })
+  const tabsHandler = path => {
+    tabsContent.forEach(el => el.classList.remove('tabs-content__active'));
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content__active');
+  }
 })

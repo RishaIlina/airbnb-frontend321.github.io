@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help page</title>
+  <title>Help-details page</title>
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" media="(prefers-color-scheme: light)">
   <meta name="theme-color" media="(prefers-color-scheme: dark)">
@@ -103,6 +103,7 @@
           </form>
         </div>
 
+
         <div class="header-buttons">
           <button class="btn btn-icon">
             <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,8 +115,9 @@
 
           <fieldset class="switcher">
             <input type="checkbox" class="switch">
-            <label for="switch"></label>
+            <label for="s2"></label>
           </fieldset>
+
 
           <button class="dropdown-button">
             <div class="icon">
@@ -150,88 +152,16 @@
             </div>
           </button>
         </div>
-      </div>
-  </header>
 
-  <main>
-    <section class="help">
-      <div class="container">
-
-        <div class="tabs">
-          <div class="tabs-list">
-            <button class="tabs-btn tabs-btn__active" data-tabs-path="Guest">Guest</button>
-            <button class="tabs-btn" data-tabs-path="Master">Master</button>
-            <button class="tabs-btn" data-tabs-path="Host">Experience Host</button>
-            <button class="tabs-btn" data-tabs-path="Manager">Trip Manager</button>
-          </div>
-
-          <div class="tabs-content tabs-content__active" data-tabs-target="Guest">
-            <div class="content">
-              <h2>Button 1</h2>
-              <p>Lorem, ipsum dolor. 1</p>
-            </div>
-          </div>
-
-          <div class="tabs-content" data-tabs-target="Master">
-            <div class="content">
-              <h2>Button 2</h2>
-              <p>Lorem, ipsum dolor. 2</p>
-            </div>
-          </div>
-
-          <div class="tabs-content" data-tabs-target="Host">
-            <div class="content">
-              <h2>Button 3</h2>
-              <p>Lorem, ipsum dolor. 3</p>
-            </div>
-          </div>
-
-          <div class="tabs-content" data-tabs-target="Manager">
-            <div class="content">
-              <h2>Button 4</h2>
-              <p>Lorem, ipsum dolor. 3</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="help-content">
-          <div class="content">
-            <h2>We've got you covered<br>
-            </h2>
-
-            <h3>Log in to get help with bookings, accounting, and more.</h3>
-          </div>
-          <button class="btn btn-airbnb">Log in or sign up</button>
-        </div>
-
-        <div class="head-card">
-          <h2>Guides for Experience Hosts</h2>
-          <a class="head-card-link" href="#">All themes
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
-              focusable="false"
-              style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
-              <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
-            </svg>
-          </a>
-        </div>
-  
-        <div class="slider-wrapper">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <!-- вставка данных по карточкам через JS  -->
-            </div>
-          </div>
-          <div class="swiper-scrollbar"></div>
-        </div>
 
       </div>
     </div>
+  </header>
 
+  <main>
+    <section>
+      <h2>Help Details</h2>
     </section>
-  </main>
-
-  </div>
-  </section>
   </main>
 
   <footer class="footer">
@@ -336,7 +266,7 @@
     </div>
   </footer>
 
-  <script src="lib/swiper.js"></script>
+  
   <script src="js/theme-switcher.js"></script>
   <script type="module" src="js/help.js"></script>
 </body>
