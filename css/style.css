@@ -4,6 +4,7 @@
 @import "../lib/swiper.css";
 @import "../css/modal.css";
 @import "../css/help.css";
+@import "../css/tabs.css";
 
 
 
@@ -439,31 +440,74 @@ h3 {
   text-decoration-line: underline;
 }
 
-.globe,
-.dollar {
-  width: 24px;
-  display: inline-block;
-  vertical-align: middle;
+.facebook,
+.twitter,
+.instagram {
+  padding: 10px;
+  border-radius: 50%;
 }
 
-.language,
-.usd {
+.facebook path,
+.instagram path,
+.twitter path {
+  fill: var(--footer-link-color);
+}
+
+.facebook:hover,
+.instagram:hover,
+.twitter:hover {
+  background-color: var(--footer-bg-hover);
+}
+
+/* footer-buttons */
+.footer-buttons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-language,
+.btn-money {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: var(--footer-link-color);
 }
 
-.facebook,
-.twitter {
-  margin-right: 16px;
-  padding: 0px;
+.btn-money:hover,
+.btn-language:hover {
+  background-color: var(--footer-bg-hover);
 }
 
-.instagram {
-  padding: 0;
+.btn-language {
+  margin-right: 4px;
+  padding: 10px;
+  border-radius: 20%;
 }
 
+.btn-language svg{
+  margin-right: 4px;
+}
+
+.btn-money {
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 20%;
+}
+
+.btn-money svg path {
+  stroke: var(--footer-link-color);
+}
+
+.btn-money svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header-buttons {
+  display: inline-flex;
+  width: 15%;
+  justify-content: space-between;
+}
 
 /* .dropdown-button */
 .dropdown-button {
