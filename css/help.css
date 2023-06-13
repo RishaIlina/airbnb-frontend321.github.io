@@ -80,71 +80,19 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: var(--bg-hover);
 }
 
-/* help-list */
-.help-list {
-  margin-bottom: 80px;
-  display: inline-flex;
-  justify-content: baseline;
-  align-items: center;
-  width: 1064px;
-  height: 50px;
-}
-
-.help-btn {
-  font-family: 'Messina Sans', sans-serif;
-  font-weight: 700;
-  color: #717171;
-  cursor: pointer;
+.block-image {
+  background: #ebebeb;
+  border-radius: 8px;
   padding: 10px;
-  margin: 0 8px;
-  background-color: transparent;
-  position: relative;
-  text-transform: capitalize;
-  border: 0;
-  border-radius: 0;
+  margin-right: 16px;
 }
 
-.help-btn::after,
-.help-btn__active::after {
-  content: '';
-  height: 1.5px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--nav-link-color);
-  inset-inline: 0;
-  transform: scaleX(0);
-  transition: transform 0.2s ease;
-}
-
-.help-btn:hover {
-  opacity: 0.65;
-}
-
-/* анимация линии при наведении на неактивную кнопку */
-.help-btn:hover::after {
-  transform: scaleX(1);
-  opacity: 0.65;
-}
-
-.help-btn__active {
-  color: var(--accent-color);
-}
-
-/* активная кнопка должна быть непрозрачной */
-.help-btn__active:hover {
-  opacity: 1;
-}
-
-/* активная кнопка должна быть непрозрачной */
-.help-btn__active:hover::after {
-  opacity: 1;
-}
-
-/* анимация линии при наведении на активную кнопку */
-.help-btn__active::after {
-  background-color: var(--accent-color);
-  transform: scaleX(1);
+.block-description p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .help-content {
@@ -174,32 +122,50 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: 400;
 }
 
-.help-guides {
+/* head-card */
+.head-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 32px;
-  color: #222222
+  margin-top: 64px;
 }
 
-.content h2 {
+.head-card h2 {
   flex-grow: 1;
   font-size: 26px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.content p {
-font-size: 14px;
-line-height: 18px;
-font-weight: 600;
-display: flex;
-justify-content: flex-end;
+.head-card-link {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  white-space: nowrap;
 }
 
-.help-card-text {
-  margin-top: 16px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
+.head-card-link svg {
+  margin: 0 0 0 10px;
+}
+
+
+/* slider */
+.slider-wrapper {
+  position: relative;
+  margin: 20px 0 90px 0;
+}
+
+/* products-wrapper */
+.products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: aquamarine;
+}
+
+.cards-wrapper {
+  margin-bottom: 20px;
 }
