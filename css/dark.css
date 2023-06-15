@@ -30,6 +30,7 @@
   --footer-bg: #292929;
   --footer-link-color: #ffffff;
   --footer-bg-hover: rgba(255, 255, 255, 0.12);
+
 }
 
 /* logo */
@@ -67,3 +68,44 @@ textarea {
   --checkbox-bg-color-checked: #BB86FC;
   --checkbox-mark-color: #222222;
   --checkbox-border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* tabs */
+.tabs-list {
+  --tabs-color: #717171;
+  --tabs-btn-text-color: #222;
+  --tabs-bg-color: #0000;
+  --tabs-btn-active: #979797;
+  --tabs-border-color: #BB86FC;
+  --tabs-box-shadow: #717171;
+}
+
+/* help-search */
+.help-search {
+  --help-search-bg-color: #717171;
+  --help-search-border-color: #979797;
+  --help-search-bg-hover: #979797;
+ }
+
+ /* search menu */
+ .search-menu {
+  --search-menu-bg-color:  #292929;
+  --search-menu-description-color: #ffffff;
+ }
+
+ /* help-content */
+ .help-content {
+  --help-content-color: #979797;
+  --help-content-border-color: #979797;
+ }
+
+ 
+ /* head-card */
+ .head-card {
+  --head-card-color: #ffffff;
+ }
+
+ /* swiper-scrollbar */
+ .swiper-scrollbar {
+  --swiper-scrollbar: #D2D2D2;
+ }
